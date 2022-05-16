@@ -101,12 +101,20 @@ for(let i = 0; i < posts.length; i++) {
 }
 
 // MILESTONE 2
-// Creo un evento click per cambiare il colore al bottone del like e aumentare il contatore dei likes.
-const btnLikes = document.querySelector(".like-button");
-const likeCounter = document.querySelector(".js-likes-counter");
+// Creo un evento click per cambiare il colore al bottone del like e aumentare il contatore dei likes per ogni post.
+const postList = document.querySelectorAll(".post");
 
-btnLikes.addEventListener("click", function() {
-    btnLikes.classList.add("like-button--liked");
+for(let i = 0; i < postList.length; i++) {
+    const btnLike = postList[i].querySelector(".like-button");
+    const likeCounter = postList[i].querySelector(".js-likes-counter");
+    btnLike.addEventListener("click",
+    function() {
+        if(btnLike.classList.contains("like-button--liked")) {
+            // aumenta il contatore di 1
+            
+        } else {
+            btnLike.classList.add("like-button--liked");
+        }
+    })
+}   
 
-    
-     });

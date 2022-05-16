@@ -99,3 +99,14 @@ for(let i = 0; i < posts.length; i++) {
     `;
     postsList.innerHTML += postHtml;
 }
+
+// MILESTONE 2
+// Creo un evento click per cambiare il colore al bottone del like e aumentare il contatore dei likes.
+const btnLikes = document.querySelector(".like-button");
+const likeCounter = document.querySelector(".js-likes-counter");
+
+btnLikes.addEventListener("click", function() {
+    btnLikes.classList.add("like-button--liked");
+
+    
+     });

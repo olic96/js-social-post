@@ -111,9 +111,10 @@ for(let i = 0; i < postList.length; i++) {
     function() {
         if(btnLike.classList.contains("like-button--liked")) {
             // aumenta il contatore di 1
-            
+            likeCounter.innerHTML = ++posts[i].likes;
         } else {
             btnLike.classList.add("like-button--liked");
+            likeCounter.innerHTML = --posts[i].likes;
         }
     })
 }   
